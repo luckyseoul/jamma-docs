@@ -5,4 +5,4 @@
 - Some boards put non-standard signals on unused pins or require higher current on +5V/+12V.
 - Early pre-JAMMA or proprietary edges converted via adapters.
 
-See manufacturer-specific notes and Mike's Arcade for conversion details.
+See manufacturer-specific notes under [`files/vendor/arcade-docs/`](../files/vendor/arcade-docs/) and the standard pinout in [`pinout.md`](pinout.md).

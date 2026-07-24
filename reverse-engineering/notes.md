@@ -1,12 +1,16 @@
 # Reverse Engineering Notes
 
-- **Shizmob / shiz arcade-docs** (Codeberg): Best organized open collection of board-level details, pinouts, and manufacturer notes. Prefer this over scattered forum posts.
-- MAME source code (drivers, machine configs) contains hard-won knowledge of undocumented registers, timing, and quirks.
-- system16.com technical pages and photo documentation.
-- Community: Arcade Projects, UKVAC, Arcade Otaku wiki, etc.
+## Offline
+- **shiz arcade-docs** (mirrored): [`files/vendor/arcade-docs/`](../files/vendor/arcade-docs/) — board-level details, pinouts, manufacturer notes by Sega, Capcom, Namco, Konami, Taito, etc.
+- Local JVS protocol: [`files/jvs/jvs_wip.pdf`](../files/jvs/jvs_wip.pdf)
 
-Common pitfalls:
-- Non-standard JAMMA pin usage or missing video ground causing sync/color issues.
-- High current draw on +5V exceeding cheap power supplies.
-- JVS sense lines, addressing, and firmware differences between I/O boards.
-- Extra harness requirements for multi-button games.
+## Living external references (not bulk-mirrored)
+- MAME source code (drivers, machine configs) — undocumented registers, timing, quirks
+- system16.com technical pages and photo documentation
+- Community: Arcade Projects, UKVAC, Arcade Otaku wiki
+
+## Common pitfalls
+- Non-standard JAMMA pin usage or missing video ground causing sync/color issues
+- High current draw on +5V exceeding cheap power supplies
+- JVS sense lines, addressing, and firmware differences between I/O boards
+- Extra harness requirements for multi-button games

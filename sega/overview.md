@@ -7,7 +7,7 @@ Sega produced many of the most important JAMMA and later JVS boards.
 - System 18
 - System 24
 - System C / C2
-- ST-V (Sega Titan Video — Saturn hardware in JAMMA form factor; cross-reference dreamcast-docs / saturn-docs for shared architecture)
+- ST-V (Sega Titan Video — Saturn hardware in JAMMA form factor; cross-reference saturn-docs for shared architecture)
 
 ### 3D / High-end
 - Model 1
@@ -22,6 +22,8 @@ Sega produced many of the most important JAMMA and later JVS boards.
 - RingEdge / RingEdge 2
 - ALLS
 
-Service manuals, operator manuals, and some technical docs appear on Sega Retro, ARCarc, and system16.com. Architecture and RE notes in Shizmob/arcade-docs under sega/.
+## Local notes
+- Manufacturer RE: [`files/vendor/arcade-docs/sega/`](../files/vendor/arcade-docs/sega/)
+- JVS protocol: [`files/jvs/jvs_wip.pdf`](../files/jvs/jvs_wip.pdf)
 
-Expand individual system pages as material is curated.
+Expand individual system pages as material is curated under `files/manuals/sega/`.

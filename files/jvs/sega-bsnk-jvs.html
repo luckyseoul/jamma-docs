@@ -1,0 +1,1130 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="JVS is a communication standard designed for I/O devices in arcade macines. It typically operates over RS485 serial, however the framing format can and sometimes is used outside of this context." name="description"/>
+<link href="https://sega.bsnk.me/ringedge/hardware/jvs/" rel="canonical"/>
+<link href="../../partition/" rel="prev"/>
+<link href="../rs232c/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.34" name="generator"/>
+<title>JAMMA Video Standard - Arcade Docs</title>
+<link href="../../../assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<meta content="website" property="og:type"/>
+<meta content="JAMMA Video Standard - Arcade Docs" property="og:title"/>
+<meta content="None" property="og:description"/>
+<meta content="https://sega.bsnk.me/assets/images/social/ringedge/hardware/jvs.png" property="og:image"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="https://sega.bsnk.me/ringedge/hardware/jvs/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="JAMMA Video Standard - Arcade Docs" name="twitter:title"/>
+<meta content="None" name="twitter:description"/>
+<meta content="https://sega.bsnk.me/assets/images/social/ringedge/hardware/jvs.png" name="twitter:image"/>
+ <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#jamma-video-standard">3. 
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Arcade Docs" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Arcade Docs">
+<img alt="logo" src="../../../mice.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Arcade Docs
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              JAMMA Video Standard
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        
+  
+    
+  
+  SEGA Arcade Docs
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../allnet/">
+          
+  
+    
+  
+  ALL.Net
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../maimai/">
+          
+  
+    
+  
+  MaiMai
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../nu_alls/keychip/introduction/">
+          
+  
+    
+  
+  Nu &amp; ALLS
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../">
+          
+  
+    
+  
+  RingEdge
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Arcade Docs" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Arcade Docs">
+<img alt="logo" src="../../../mice.png"/>
+</a>
+    Arcade Docs
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    SEGA Arcade Docs
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../allnet/">
+<span class="md-ellipsis">
+    ALL.Net
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            ALL.Net
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/amusement_ic/">
+<span class="md-ellipsis">
+    Amusement IC
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../allnet/access_codes/">
+<span class="md-ellipsis">
+    Access codes
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Access codes
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/access_codes/aicc/">
+<span class="md-ellipsis">
+    Amusement IC Access Codes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/access_codes/bana/">
+<span class="md-ellipsis">
+    Banapass Access Codes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/access_codes/classic/">
+<span class="md-ellipsis">
+    Classical AiMe Access Codes
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    AiMeDB
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+            AiMeDB
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/aimedb/intro/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/aimedb/communication/">
+<span class="md-ellipsis">
+    Communication Specification
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/aimedb/common/">
+<span class="md-ellipsis">
+    Common API Specification
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/aimedb/alive/">
+<span class="md-ellipsis">
+    Service Meta Endpoints
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/aimedb/felica/">
+<span class="md-ellipsis">
+    FeliCa Card Conversion
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/aimedb/basic_account/">
+<span class="md-ellipsis">
+    Basic AiMe Account Management
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/aimedb/logstatus/">
+<span class="md-ellipsis">
+    Send Status Log
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/aimedb/aimelog/">
+<span class="md-ellipsis">
+    Send AiMe Log
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/aimedb/campaign_info/">
+<span class="md-ellipsis">
+    Get Campaign Info
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/aimedb/campaign_clear_info/">
+<span class="md-ellipsis">
+    Get Campaign Clear Info
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/aimedb/accountex/">
+<span class="md-ellipsis">
+    Get Extended Account Information
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/aimedb/accounts/">
+<span class="md-ellipsis">
+    Get Account Information with Extended Security
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/aimedb/aimelogex/">
+<span class="md-ellipsis">
+    Send Extended AiMe Log
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/aimedb/communication%20copy/">
+<span class="md-ellipsis">
+    Communication Specification
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/aimedb/packet_index/">
+<span class="md-ellipsis">
+    Index
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Authentication Service
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+            Authentication Service
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/auth/intro/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/auth/common/">
+<span class="md-ellipsis">
+    Authentication Common
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/auth/alive/">
+<span class="md-ellipsis">
+    Service Health
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/auth/power-on/">
+<span class="md-ellipsis">
+    Cabinet Power On
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/auth/download-order/">
+<span class="md-ellipsis">
+    Download Instruction Request
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/auth/loader-state-recorder/">
+<span class="md-ellipsis">
+    Loader State Recorder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/auth/deliver-report/">
+<span class="md-ellipsis">
+    Delivery Report
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/auth/authv2/">
+<span class="md-ellipsis">
+    Auth V2
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Billing Service
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_6">
+<span class="md-nav__icon md-icon"></span>
+            Billing Service
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/billing/intro/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/billing/encoding/">
+<span class="md-ellipsis">
+    Encoding
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/billing/datatypes/">
+<span class="md-ellipsis">
+    Datatypes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/billing/enumerations/">
+<span class="md-ellipsis">
+    Enumerations
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/billing/signatures/">
+<span class="md-ellipsis">
+    Signatures
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/billing/request/">
+<span class="md-ellipsis">
+    Request
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/billing/response/">
+<span class="md-ellipsis">
+    Response
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/billing/recommendations/">
+<span class="md-ellipsis">
+    Recommended Defaults
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../allnet/billing/format_strings/">
+<span class="md-ellipsis">
+    Format strings
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../maimai/">
+<span class="md-ellipsis">
+    MaiMai
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            MaiMai
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../maimai/groovemaster/">
+<span class="md-ellipsis">
+    GrooveMaster.ini
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../maimai/paths/">
+<span class="md-ellipsis">
+    File Search Paths
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../maimai/touch/">
+<span class="md-ellipsis">
+    The MaiMai Touchscreen
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Nu &amp; ALLS
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Nu &amp; ALLS
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Keychips
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+            Keychips
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../nu_alls/keychip/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    RingEdge
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            RingEdge
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../partition/">
+<span class="md-ellipsis">
+    SEGA Partition Structure
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Hardware
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_5_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_3">
+<span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    JAMMA Video Standard
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    JAMMA Video Standard
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#escaping">3.1 
+<span class="md-ellipsis">
+      Escaping
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#packet-framing">3.2 
+<span class="md-ellipsis">
+      Packet framing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands-and-responses">3.3 
+<span class="md-ellipsis">
+      Commands and responses
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#individual-commands">3.4 
+<span class="md-ellipsis">
+      Individual commands
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../rs232c/">
+<span class="md-ellipsis">
+    JAMMA Video Standard - SEGA Modiciations
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Manual
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_4">
+<span class="md-nav__icon md-icon"></span>
+            Manual
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../manual/errors/">
+<span class="md-ellipsis">
+    Errors
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Software
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_5">
+<span class="md-nav__icon md-icon"></span>
+            Software
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/boot/">
+<span class="md-ellipsis">
+    Boot Process
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/geminifs/">
+<span class="md-ellipsis">
+    geminifs
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_5_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../software/drivers/">
+<span class="md-ellipsis">
+    Drivers
+  </span>
+</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_5_5_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_5_3">
+<span class="md-nav__icon md-icon"></span>
+            Drivers
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_5_4" id="__nav_5_5_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Mx
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_5_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_5_4">
+<span class="md-nav__icon md-icon"></span>
+            Mx
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/mx/mxgcatcher/">
+<span class="md-ellipsis">
+    mxgcatcher
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/mx/mxgdeliver/">
+<span class="md-ellipsis">
+    mxgdeliver
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/mx/mxgfetcher/">
+<span class="md-ellipsis">
+    mxgfetcher
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/mx/mxinstaller/">
+<span class="md-ellipsis">
+    mxinstaller
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/mx/mxkeychip/">
+<span class="md-ellipsis">
+    mxkeychip
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/mx/mxmaster/">
+<span class="md-ellipsis">
+    mxmaster
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/mx/mxnetwork/">
+<span class="md-ellipsis">
+    mxnetwork
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/mx/mxprestartup/">
+<span class="md-ellipsis">
+    mxprestartup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/mx/mxsegaboot/">
+<span class="md-ellipsis">
+    mxsegaboot
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/mx/mxstartup/">
+<span class="md-ellipsis">
+    mxstartup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/mx/mxstorage/">
+<span class="md-ellipsis">
+    mxstorage
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_5_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../software/pcp/">
+<span class="md-ellipsis">
+    Pcp
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_5_5_5" id="__nav_5_5_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_5_5_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_5_5">
+<span class="md-nav__icon md-icon"></span>
+            Pcp
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/pcp/libpcp/">
+<span class="md-ellipsis">
+    libpcp
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_5_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_5_6" id="__nav_5_5_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Security
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_5_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_5_6">
+<span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/security/alphadvd/">
+<span class="md-ellipsis">
+    AlphaDVD (aka αDVD)
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/security/dssha/">
+<span class="md-ellipsis">
+    DS28CN01 and DS2460
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../software/security/security/">
+<span class="md-ellipsis">
+    System Security
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="jamma-video-standard"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.</span> JAMMA Video Standard</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a href="/static/JVST_VER3.pdf">A copy of the JVS standard can be found here</a>. The astute reader may observe it is in Japanese. A rather excelent translation can be <a href="http://daifukkat.su/files/jvs_wip.pdf">found here</a>.</p>
+</div>
+<p>JVS is a communication standard designed for I/O devices in arcade macines. It typically operates over RS485 serial, however the framing format can and sometimes is used outside of this context.</p>
+<p>This page documents the canonical JVS structure. Some devices, notably the <code>838-14971</code>, use a slight variant on the format. <a href="../rs232c/">The differences between the two formats are document here</a>.</p>
+<h2 id="escaping"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.1</span> Escaping</h2>
+<p>Every packet sent begins with the <code>SYNC</code> byte, <code>0xe0</code>. Read buffers should be continually flushed until this byte is observed.</p>
+<p>As such, <code>0xe0</code> is reserved, and is escaped. A byte is escaped using <code>MARK</code>, <code>0xd0</code>, followed by the byte’s value subtract one. While any byte can be escaped, the only two that require escaping are <code>SYNC</code> and <code>MARK</code>, escaped as <code>D0 DF</code> and <code>D0 CF</code> respectively. All operations on packets, such as checksums and length calculation, are performed on the <strong>unescaped</strong> packet.</p>
+<h2 id="packet-framing"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.2</span> Packet framing</h2>
+<figure>
+<figcaption>Request packet (master-&gt;slave)</figcaption>
+<table>
+<thead>
+<tr>
+<th>00</th>
+<th>01</th>
+<th>02</th>
+<th>03</th>
+<th>04</th>
+<th>05</th>
+<th colspan="3">…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E0<sub>h</sub></td>
+<td>Dest</td>
+<td>n</td>
+<td><code>D</code><sub>0</sub></td>
+<td><code>D</code><sub>1</sub></td>
+<td><code>D</code><sub>2</sub></td>
+<td>…</td>
+<td><code>D</code><sub>n-2</sub></td>
+<td><code>SUM</code></td>
+</tr>
+</tbody>
+</table>
+</figure>
+<figure>
+<figcaption>Response packet (slave-&gt;master)</figcaption>
+<table>
+<thead>
+<tr>
+<th>00</th>
+<th>01</th>
+<th>02</th>
+<th>03</th>
+<th>04</th>
+<th>05</th>
+<th>06</th>
+<th colspan="3">…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E0<sub>h</sub></td>
+<td>Dest</td>
+<td><code>n</code></td>
+<td>Status</td>
+<td><code>D</code><sub>0</sub></td>
+<td><code>D</code><sub>1</sub></td>
+<td><code>D</code><sub>2</sub></td>
+<td>…</td>
+<td><code>D</code><sub>n-3</sub></td>
+<td><code>SUM</code></td>
+</tr>
+</tbody>
+</table>
+</figure>
+<p><code>SUM</code> is calculated by summing all bytes in the packet, excluding <code>SYNC</code> and <code>SUM</code> itself. <code>n</code> indicates the number of bytes succeeding itself. Due to the existance of the checksum, <code>n=0</code> is nonsensical.</p>
+<h2 id="commands-and-responses"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3</span> Commands and responses</h2>
+<p>A request packet may contain multiple commands within it. <code>D~0~</code> always contains the first command. It is followed by <code>m</code> bytes of data, typically a constant number per command but not always (see the command reference), at which point either we have consumed <code>n-1</code> bytes and the next byte is <code>SUM</code>, or the next byte is another command and we repeat.</p>
+<table>
+<thead>
+<tr>
+<th>00</th>
+<th>01</th>
+<th>02</th>
+<th>03</th>
+<th>04</th>
+<th>05</th>
+<th>06</th>
+<th colspan="6">…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CMD</code><sub>0</sub></td>
+<td><code>D</code><sub>0,0</sub></td>
+<td><code>D</code><sub>0,1</sub></td>
+<td>…</td>
+<td><code>CMD</code><sub>1</sub></td>
+<td><code>D</code><sub>1,0</sub></td>
+<td><code>D</code><sub>1,1</sub></td>
+<td>…</td>
+<td><code>CMD</code><sub>2</sub></td>
+<td><code>D</code><sub>2,0</sub></td>
+<td><code>D</code><sub>2,1</sub></td>
+<td>…</td>
+<td><code>SUM</code></td>
+</tr>
+</tbody>
+</table>
+<p>Response packets are structured similarly, however the <code>CMD</code> byte is not present, instead relying on the response to be ordered exactly the same as the request. The data of each command is preceeded by a report code, indicating that individual command’s status. The below diagram also includes the entire-packet status byte too for clarity.</p>
+<table>
+<thead>
+<tr>
+<th>00</th>
+<th>01</th>
+<th>02</th>
+<th>03</th>
+<th>04</th>
+<th>05</th>
+<th>06</th>
+<th>07</th>
+<th colspan="6">…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status</td>
+<td>Report<sub>0</sub></td>
+<td><code>D</code><sub>0,0</sub></td>
+<td><code>D</code><sub>0,1</sub></td>
+<td>…</td>
+<td>Report<sub>1</sub></td>
+<td><code>D</code><sub>1,0</sub></td>
+<td><code>D</code><sub>1,1</sub></td>
+<td>…</td>
+<td>Report<sub>2</sub></td>
+<td><code>D</code><sub>2,0</sub></td>
+<td><code>D</code><sub>2,1</sub></td>
+<td>…</td>
+<td><code>SUM</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="individual-commands"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.4</span> Individual commands</h2>
+<p>Later.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.path", "navigation.indexes", "navigation.tabs", "navigation.instant", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+<script src="../../../javascripts/mathjax.js"></script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

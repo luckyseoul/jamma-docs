@@ -1,7 +1,5 @@
-*.pdf
-*.zip
-*.rar
-*.bin
 *.iso
 *.chd
 .DS_Store
+*.swp
+*~
