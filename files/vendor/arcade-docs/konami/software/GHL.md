@@ -23,7 +23,7 @@ Game code **GHL**. Runs on Konami PC sticker **B10** ([FAB-e945-KN210](../boards
 
 ## Operator documentation
 
-- [Silent_Hill_The_Arcade_Operators_Manual_GKGHL-EA.pdf](../../../manuals/konami/Silent_Hill_The_Arcade_Operators_Manual_GKGHL-EA.pdf) — 51 pp, first printing 2007-10
+- [Silent_Hill_The_Arcade_Operators_Manual_GKGHL-EA.pdf](../../../../manuals/konami/Silent_Hill_The_Arcade_Operators_Manual_GKGHL-EA.pdf) — 51 pp, first printing 2007-10
 
 ## Runtime notes
 

@@ -110,7 +110,7 @@ Not a classic discrete PCB → **no standard MAME driver** like Hornet/Python.
 
 | File | Description |
 |------|-------------|
-| [Silent_Hill_The_Arcade_Operators_Manual_GKGHL-EA.pdf](../../../manuals/konami/Silent_Hill_The_Arcade_Operators_Manual_GKGHL-EA.pdf) | Official operator manual, **GKGHL-EA**, 51 pp, Konami 2007-10 (GNGHL-HD/TB) |
+| [Silent_Hill_The_Arcade_Operators_Manual_GKGHL-EA.pdf](../../../../manuals/konami/Silent_Hill_The_Arcade_Operators_Manual_GKGHL-EA.pdf) | Official operator manual, **GKGHL-EA**, 51 pp, Konami 2007-10 (GNGHL-HD/TB) |
 
 ## Cross-references
 
