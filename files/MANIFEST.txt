@@ -1,6 +1,7 @@
 files/jvs/jvs_wip.pdf
 files/jvs/sega-bsnk-jvs.html
 files/MANIFEST.txt
+files/manuals/konami/Silent_Hill_The_Arcade_Operators_Manual_GKGHL-EA.pdf
 files/vendor/arcade-docs/andamiro/board.md
 files/vendor/arcade-docs/andamiro/board/mkv.md
 files/vendor/arcade-docs/andamiro/cabinet.md
@@ -75,6 +76,7 @@ files/vendor/arcade-docs/konami/product/GEFDD-JB.md
 files/vendor/arcade-docs/konami/product/GEG32-JA.md
 files/vendor/arcade-docs/konami/product/GELDJ-JM.md
 files/vendor/arcade-docs/konami/product/GELDJ-JO.md
+files/vendor/arcade-docs/konami/product/GHL.md
 files/vendor/arcade-docs/konami/product/GQ863-JA.md
 files/vendor/arcade-docs/konami/product/GQ983-JA.md
 files/vendor/arcade-docs/konami/product/GQ985-JA.md
@@ -107,6 +109,7 @@ files/vendor/arcade-docs/konami/software/D01.md
 files/vendor/arcade-docs/konami/software/E11.md
 files/vendor/arcade-docs/konami/software/ECO.md
 files/vendor/arcade-docs/konami/software/FDD.md
+files/vendor/arcade-docs/konami/software/GHL.md
 files/vendor/arcade-docs/konami/software/GLD.md
 files/vendor/arcade-docs/konami/software/HDD.md
 files/vendor/arcade-docs/konami/software/I00.md

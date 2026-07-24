@@ -66,6 +66,13 @@ Board notes and I/O details under [`files/vendor/arcade-docs/`](files/vendor/arc
 
 See [`reverse-engineering/notes.md`](reverse-engineering/notes.md) and the offline shiz arcade-docs tree.
 
+## Silent Hill THE ARCADE (GHL)
+
+Konami PC light-gun title (product **GHL**, board sticker **B10**):
+- Dossier: [`files/vendor/arcade-docs/konami/product/GHL.md`](files/vendor/arcade-docs/konami/product/GHL.md)
+- Operator manual: [`files/manuals/konami/Silent_Hill_The_Arcade_Operators_Manual_GKGHL-EA.pdf`](files/manuals/konami/Silent_Hill_The_Arcade_Operators_Manual_GKGHL-EA.pdf)
+
+
 ## Coverage Note
 
 Pinouts, JVS protocol, and manufacturer RE markdown are offline. Exhaustive per-game service manuals (ARCarc-scale) are intentionally not bulk-imported; add individual PDFs under `files/manuals/<mfr>/<game>.pdf` as needed.

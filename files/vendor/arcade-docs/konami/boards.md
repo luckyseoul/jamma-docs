@@ -413,8 +413,9 @@ Also known as: "BemaniPC Type 2" (unofficially).
 **Sticker:** B10  
 **CPU:** Celeron D 341 (2.93GHz)  
 **GPU:** ATI Radeon X1300  
-**RAM:** 2 x 512 MB (?)
-**Games:** GHL  
+**RAM:** 2 x 512 MB (?)  
+**Games:** [GHL](product/GHL.md) (Silent Hill THE ARCADE)  
+**Docs:** [product/GHL.md](product/GHL.md) · [software/GHL.md](software/GHL.md) · [Operator manual (GKGHL-EA)](../../../manuals/konami/Silent_Hill_The_Arcade_Operators_Manual_GKGHL-EA.pdf)  
 
 ### `FAB-e965-KN*`
 

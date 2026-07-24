@@ -1728,9 +1728,10 @@ unknown:
 * `GGG`: オトメディウス / OTOMEDIUS (2007, PC(A3)IO(e-amu))  `#MISC:oyakodon_oniku_list #WEB:https://manualzz.com/doc/5000543/%E3%82%AA%E3%83%88%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A6%E3%82%B9---konami`
   - `GEGGG-JA`
   - `GEGGG-JB`
-* `GHL`: サイレントヒルアーケード / Silent Hill THE ARCADE (2007, PC(B10)IO(serial?))  `#MISC:oyakodon_oniku_list #WEB:https://twitter.com/infinity8686/status/1066677366414397441 #WEB:https://manualzz.com/doc/5003619/%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%E3%83%88%E3%83%92%E3%83%AB%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%B1%E3%83%BC%E3%83%89`
+* [`GHL`: サイレントヒルアーケード / Silent Hill THE ARCADE](product/GHL.md) (2007, PC(B10)IO(serial?))  `#MISC:oyakodon_oniku_list #WEB:https://twitter.com/infinity8686/status/1066677366414397441 #WEB:https://manualzz.com/doc/5003619/%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%E3%83%88%E3%83%92%E3%83%AB%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%B1%E3%83%BC%E3%83%89 #DOC:manuals/konami/Silent_Hill_The_Arcade_Operators_Manual_GKGHL-EA.pdf`
+  - Software / disc set: [software/GHL.md](software/GHL.md)
   - `GNGHL-JA`  `#WEB:https://page.auctions.yahoo.co.jp/jp/auction/d1065857267 #WEB:https://page.auctions.yahoo.co.jp/jp/auction/o1064442704`
-  - `GKGHL-EA`  `#DOC:konami:?`
+  - `GKGHL-EA`  `#DOC:manuals/konami/Silent_Hill_The_Arcade_Operators_Manual_GKGHL-EA.pdf`
   - `GHL JA A01`: system disc
   - `GHL AA A01`: system disc `#WEB:https://www.facebook.com/jamesgamecenter/photos/a.489022501209842/3501866689925393/`
   - `GHL JA B02`: application disc 1
