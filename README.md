@@ -1,5 +1,10 @@
 # JAMMA Arcade Documentation Repository
 
+<p align="center">
+  <img src="logo.png" alt="JAMMA arcade connector" width="168" />
+</p>
+
+
 Curated collection of publicly available JAMMA (and successor JVS) arcade standards, pinouts, wiring guides, manufacturer RE notes, and offline document mirrors under [`files/`](files/).
 
 ## Local Primary Sources
