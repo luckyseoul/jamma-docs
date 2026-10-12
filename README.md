@@ -14,6 +14,7 @@ Curated collection of publicly available JAMMA (and successor JVS) arcade standa
 | daifukkat JVS English translation (WIP) | [`files/jvs/jvs_wip.pdf`](files/jvs/jvs_wip.pdf) |
 | sega.bsnk.me JVS page (HTML snapshot) | [`files/jvs/sega-bsnk-jvs.html`](files/jvs/sega-bsnk-jvs.html) |
 | shiz/arcade-docs (Codeberg) full mirror | [`files/vendor/arcade-docs/`](files/vendor/arcade-docs/) |
+| Capcom CPS-2/CPS-3 kick harness (CAPCOM-H2) | [`files/manuals/capcom/CAPCOM-H2.pdf`](files/manuals/capcom/CAPCOM-H2.pdf) |
 
 ### Vendor arcade-docs highlights
 - [`files/vendor/arcade-docs/sega/boards.md`](files/vendor/arcade-docs/sega/boards.md)

@@ -13,4 +13,9 @@
 ## 2026-07-23
 - Repository created; initial structure
 
-_Updated 2026-07-24_
+## 2026-10-12
+
+- CPS-2/CPS-3 kick harness sheet `files/manuals/capcom/CAPCOM-H2.pdf` and pin table in `standard/variants.md`
+- `shizmob/arcade-docs` had no commits after 2025-06-09; the July 2026 vendor mirror is still current
+
+_Updated 2026-10-12_
