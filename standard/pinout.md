@@ -6,6 +6,8 @@ The JAMMA (Japanese Amusement Machine Manufacturers' Association) connector is a
 
 This table is compiled from community-standard references (Mike's Arcade, Arcade Museum, common harness diagrams). Always cross-check the specific game board, as some use non-standard assignments or require additional harnesses.
 
+The edge as first published is page 9 of *Game Machine*, 1 January 1986 (archive.org item `game-machine-magazine-19860101p`). That publication defines buttons 1–3. Buttons 4–6 on pins c/d/e and 25/26/27 are later cabinet extensions, which many boards leave unused.
+
 ## Full Dual-Side Pinout
 
 | Solder Side | Function                  | Parts Side | Function                  |

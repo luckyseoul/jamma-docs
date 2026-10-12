@@ -17,5 +17,9 @@
 
 - CPS-2/CPS-3 kick harness sheet `files/manuals/capcom/CAPCOM-H2.pdf` and pin table in `standard/variants.md`
 - `shizmob/arcade-docs` had no commits after 2025-06-09; the July 2026 vendor mirror is still current
+- Japanese JVS third edition `files/jvs/JVST_VER3.pdf` (32 pages; `file(1)` under-counts this PDF 1.2)
+- Sega I/O pin maps in `standard/sega-jvs-io.md`, from the MAME Naomi comment block
+- 1986 *Game Machine* citation added on `standard/pinout.md`
+- Naomi Universal cabinet PDF on Arcade Otaku returned an error page this pass, so it is not mirrored. The Type 1 vs Type 2 spreadsheet on OneDrive is still gated.
 
 _Updated 2026-10-12_

@@ -11,8 +11,10 @@ Curated collection of publicly available JAMMA (and successor JVS) arcade standa
 
 | Source | Local path |
 |--------|------------|
+| JAMMA VIDEO standard, third edition (Japanese, 2000-05-31 revision) | [`files/jvs/JVST_VER3.pdf`](files/jvs/JVST_VER3.pdf) |
 | daifukkat JVS English translation (WIP) | [`files/jvs/jvs_wip.pdf`](files/jvs/jvs_wip.pdf) |
 | sega.bsnk.me JVS page (HTML snapshot) | [`files/jvs/sega-bsnk-jvs.html`](files/jvs/sega-bsnk-jvs.html) |
+| Sega JVS I/O Type 1 / Type 2 pin maps | [`standard/sega-jvs-io.md`](standard/sega-jvs-io.md) |
 | shiz/arcade-docs (Codeberg) full mirror | [`files/vendor/arcade-docs/`](files/vendor/arcade-docs/) |
 | Capcom CPS-2/CPS-3 kick harness (CAPCOM-H2) | [`files/manuals/capcom/CAPCOM-H2.pdf`](files/manuals/capcom/CAPCOM-H2.pdf) |
 
@@ -56,7 +58,9 @@ Many boards use only a subset. Extra buttons/controls use additional harnesses o
 
 JVS is the digital serial I/O standard (typically RS-485) that replaced the analog edge connector for modern systems.
 
-- **Local protocol PDF**: [`files/jvs/jvs_wip.pdf`](files/jvs/jvs_wip.pdf)
+- **Japanese standard (third edition)**: [`files/jvs/JVST_VER3.pdf`](files/jvs/JVST_VER3.pdf)
+- **English translation**: [`files/jvs/jvs_wip.pdf`](files/jvs/jvs_wip.pdf)
+- **Sega I/O board pin maps**: [`standard/sega-jvs-io.md`](standard/sega-jvs-io.md)
 - **Local HTML**: [`files/jvs/sega-bsnk-jvs.html`](files/jvs/sega-bsnk-jvs.html)
 - Technical summary: [`jvs/overview.md`](jvs/overview.md)
 

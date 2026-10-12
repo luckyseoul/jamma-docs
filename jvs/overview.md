@@ -3,8 +3,10 @@
 Self-contained technical summary of the JAMMA Video Standard (JVS), the digital I/O successor to the classic analog JAMMA edge connector. Used by Sega Naomi family, Chihiro, Triforce, Lindbergh, RingEdge, many Namco, Taito, and later PC-based arcade systems.
 
 ## Local primary documents
-- English WIP translation: [`files/jvs/jvs_wip.pdf`](../files/jvs/jvs_wip.pdf)
+- Japanese third edition (enacted 1996-11-15, revised 1997-07-17 and 2000-05-31): [`files/jvs/JVST_VER3.pdf`](../files/jvs/JVST_VER3.pdf)
+- English WIP translation of that edition: [`files/jvs/jvs_wip.pdf`](../files/jvs/jvs_wip.pdf)
 - HTML snapshot (sega.bsnk.me): [`files/jvs/sega-bsnk-jvs.html`](../files/jvs/sega-bsnk-jvs.html)
+- Sega Type 1 (837-13551) and Type 2 (837-13844) connector maps: [`standard/sega-jvs-io.md`](../standard/sega-jvs-io.md)
 
 This file also contains the core protocol data so the repository is usable offline without those PDFs.
 
